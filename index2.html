@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"><!--Link to bootstrap-->
+    <link rel="stylesheet" href="style.css"> <!--Link to the css page-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--Link to your boxicons-->
+
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <div class="logo">    <i class='bx bx-store' style="font-size: 26px;"></i>
+            <span style="color: #333; font-size: 25px; ">Store</span></div><!--Logo of web-->
+        <nav>
+            <a href="#">Home</a>
+            <a href="#sport">Sport</a>
+            <a href="#family">Family</a>
+            <a href="#Electric">Electrical</a>
+            <a href="#part">Parts</a>
+            <a href="index.html">Back</a>
+
+        </nav>
+        <button class="toggle-cart-btn" onclick="toggleCart()"><i class='bx bxs-credit-card' style="font-size: 22px; padding: 0; "></i> Purchases<span class="cart-count" id="cart-count">0</span></button> <!--A click displays an invoice for purchases-->
+      </header>
+
+      
+
+
+
+
+<!--home-->
+
+<div class="home2">
+    <h1>Welcome to Our Showroom</h1>
+    <p>Find everything you need from sports cars, family cars, and spare parts.</p>
+    <a href="#sport" class="cta-button">Discover More</a>
+</div>
+
+
+
+
+<!--Sports cars section-->
+
+<h1 class="heading" id="sport" style="margin-top: 100px;"><span>Sports Cars</span></h1> <!--the address-->
+<!--List of existing car types-->
+  <div class="filter-menu" >
+    <button class="filter-button active" data-type="all">All</button>
+    <button class="filter-button" data-type="porsche"><img src="porsche-logo.png"></button>
+    <button class="filter-button" data-type="bugatti"><img src="https://www.pngplay.com/wp-content/uploads/13/Bugatti-Logo-Transparent-Image.png" style="width: 60px;"></button>
+    <button class="filter-button" data-type="camaro"><img src="chevrolet-car-logo.png"></button>
+    <button class="filter-button" data-type="ferrari"><img src="car-logo.png"></button>
+    <button class="filter-button" data-type="lamborghini"><img src="https://cdn.prod.website-files.com/64ea57571d50b02423c4505d/64fa2d1019d8ee13992c65eb_lambo%20logo.png"></button>
+  </div>
+
+  <div class="car-grid">
+    <!-- bugatti Cars -->
+     <!--Car 1-->
+    <div class="car-card" data-type="bugatti">
+      <img src="bugatti-3.png" >
+      <h3>Bugatti Veyron</h3>
+      <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+      <p >$598,900</p>
+      <button class="add" id="purchase-btn"  onclick="addToCart('Bugatti Veyron', 598900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+    </div>
+         <!--Car 2-->
+
+    <div class="car-card" data-type="bugatti">
+      <img src="bugatti-4.png" style="padding-bottom: 22px;">
+      <h3>Bugatti Veyron</h3>
+      <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+      <p>$2,000,000</p>
+      <button class="add" id="purchase-btn" onclick="addToCart('Bugatti Veyron', 2000000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+         <!--Car 3-->
+
+    <div class="car-card" data-type="bugatti">
+        <img src="bugatti-11.png" style="padding-bottom: 22px;" >
+        <h3>Bugatti Veyron</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+        <p>$2,100,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Bugatti Veyron', 2100000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+         <!--Car 4-->
+
+    <div class="car-card" data-type="bugatti">
+        <img src="bugatti-15.png" style="padding-bottom: 52px;">
+        <h3>Bugatti Chiron</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+        <p>$1,000,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Bugatti Chiron', 1000000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+
+    <!-- camaro Cars -->
+     <!--Car 1-->
+    <div class="car-card" data-type="camaro">
+      <img src="chevrolet-camaro-6.png" >
+      <h3>chevrolet-camaro</h3>
+      <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i></span>
+      <p>$20,000</p>
+      <button class="add" id="purchase-btn" onclick="addToCart('chevrolet-camaro', 20000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+    </div>
+         <!--Car 2-->
+
+    <div class="car-card" data-type="camaro">
+        <img src="chevrolet-camaro-10.png" >
+        <h3>chevrolet-camaro</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+        <p>$35,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('chevrolet-camaro', 35000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+           <!--Car 3-->
+
+      <div class="car-card" data-type="camaro">
+        <img src="chevrolet-camaro-12.png" style="padding-bottom: 2px;">
+        <h3>chevrolet-camaro</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$35,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('chevrolet-camaro', 35000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+           <!--Car 4-->
+
+      <div class="car-card" data-type="camaro">
+        <img src="chevrolet-camaro-car.png" style="padding-bottom: 25px;">
+        <h3>chevrolet-camaro</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i></span>
+        <p>$30,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('chevrolet-camaro', 30000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+      </div>
+      
+
+
+
+    <!-- ferrari Cars -->
+                <!--Car 1-->
+
+    <div class="car-card" data-type="ferrari">
+      <img src="ferrari.png" >
+      <h3>Ferrari</h3>
+      <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+      <p>$2,500,000</p>
+      <button class="add" id="purchase-btn" onclick="addToCart('Ferrari', 2500000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+               <!--Car 2-->
+
+    <div class="car-card" data-type="ferrari">
+        <img src="ferrari1.png" style="padding-bottom: 42px;">
+        <h3>Ferrari</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$1,500,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Ferrari', 1500000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+                 <!--Car 3-->
+
+      <div class="car-card" data-type="ferrari">
+        <img src="ferrari2.png" style="padding-bottom: 52px;">
+        <h3>Ferrari</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$350,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Ferrari', 350900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+                 <!--Car 4-->
+
+      <div class="car-card" data-type="ferrari">
+        <img src="ferrari3.png" style="padding-bottom: 32px;">
+        <h3>Ferrari</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$100,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Ferrari', 100000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+
+
+
+    <!-- lamborghini Cars -->
+                 <!--Car 1-->
+
+      <div class="car-card" data-type="lamborghini">
+        <img src="lamborghini-3.png" style="padding-bottom: 12px;">
+        <h3>lamborghini</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$250,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('lamborghini', 250900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+                 <!--Car 2-->
+
+      <div class="car-card" data-type="lamborghini">
+        <img src="lamborghini-4.png" style="padding-bottom: 32px;">
+        <h3>lamborghini</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$250,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('lamborghini', 250900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+                       <!--Car 3-->
+
+      <div class="car-card" data-type="lamborghini">
+        <img src="lamborghini-aventador-car.png" style="padding-bottom: 72px;">
+        <h3>lamborghini</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$650,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('lamborghini', 650000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+                       <!--Car 4-->
+
+      <div class="car-card" data-type="lamborghini">
+        <img src="lamborghini-huracan-o-ct800-car.png" style="padding-bottom: 72px;">
+        <h3>lamborghini</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$150,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('lamborghini', 150000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+
+<!-- porsche Cars -->
+                 <!--Car 1-->
+
+      <div class="car-card" data-type="porsche">
+        <img src="porsche-5.png" alt="Porsche Taycan" style="padding-bottom:-10px;">
+        <h3>Porsche Taycan</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$170,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Porsche Taycan', 170000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+                       <!--Car 2-->
+
+      <div class="car-card" data-type="porsche">
+        <img src="porsche-718-boxster-s-orange-car.png" alt="Porsche Taycan" style="padding-bottom: 42px;">
+        <h3>Porsche Taycan</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$100,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Porsche Taycan',100000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+                       <!--Car 3-->
+
+      <div class="car-card" data-type="porsche">
+        <img src="red-porsche-911-gt3-rs-4-car.png" alt="Porsche Taycan" style="padding-bottom: 42px;">
+        <h3>Porsche Taycan</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$200,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Porsche Taycan', 200000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+                       <!--Car 4-->
+
+      <div class="car-card" data-type="porsche">
+        <img src="white-porsche-911-r-car.png" alt="Porsche Taycan" style="padding-bottom: 42px;">
+        <h3>Porsche Taycan</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$150,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Porsche Taycan', 1500000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+  </div>
+
+
+
+
+
+
+<!--Family Cars section-->
+
+
+
+
+
+
+  <h1 class="heading" id="family" style="margin-top: 100px;"><span>Family Cars</span></h1><!--the address-->
+<!--List of existing car types-->
+
+  <div class="filter-menu" >
+    <button class="filter-button active" data-type="all">All</button>
+    <button class="filter-button" data-type="mercedes"><img src="mercedes-benz-car-logo.png"></button>
+    <button class="filter-button" data-type="hummer"><img src="https://www.creativefabrica.com/wp-content/uploads/2022/03/15/Hummer-retro-vintage-logo-vector-Graphics-27191549-1.jpg" style="width: 80px;"></button>
+    <button class="filter-button" data-type="hyundai"><img src="chevrolet-car-logo-2.png"></button>
+    <button class="filter-button" data-type="bmw"><img src="bmw-car-logo.png"></button>
+
+  </div>
+
+  <div class="car-grid">
+    <!-- mercedes Cars -->
+     <!--Car 1-->
+    <div class="car-card" data-type="mercedes">
+      <img src="mercedes-41.png" style="padding-bottom:22px ;">
+      <h3>Mercedes</h3>
+      <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+      <p>$100,000</p>
+      <button class="add" id="purchase-btn" onclick="addToCart('Mercedes', 100000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+         <!--Car 2-->
+
+    <div class="car-card" data-type="mercedes">
+      <img src="mercedes-benz-gle-coupe-white-car-2.png" style="padding-bottom:42px ;">
+      <h3>Mercedes</h3>
+      <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+      <p>$75,900</p>
+      <button class="add" id="purchase-btn" onclick="addToCart('Mercedes', 75900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+         <!--Car 3-->
+
+    <div class="car-card" data-type="mercedes">
+        <img src="mercedes-benz-gls-class-red-car-2.png" style="padding-bottom:26px ;">
+        <h3>Mercedes</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$45,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Mercedes', 45900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+         <!--Car 4-->
+
+    <div class="car-card" data-type="mercedes">
+        <img src="mercedes.png" style="padding-bottom:22px ;">
+        <h3>Mercedes</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$30,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Mercedes', 30000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+
+    <!-- hummer Cars -->
+     <!--Car 1-->
+    <div class="car-card" data-type="hummer">
+      <img src="hummer-3.png">
+      <h3>Hummer</h3>
+      <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+      <p>$35,000</p>
+      <button class="add" id="purchase-btn" onclick="addToCart('Hummer', 35000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+         <!--Car 2-->
+
+    <div class="car-card" data-type="hummer">
+        <img src="hummer-4.png" style="padding-bottom:22px ;">
+        <h3>Hummer</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i></span>
+
+        <p>$20,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Hummer', 20900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+           <!--Car 3-->
+
+      <div class="car-card" data-type="hummer">
+        <img src="hummer-6.png" style="padding-bottom:42px ;">
+        <h3>Hummer</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$65,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Hummer', 65900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+           <!--Car 4-->
+
+      <div class="car-card" data-type="hummer">
+        <img src="hummer-7.png" style="padding-bottom:52px ;">
+        <h3>Hummer</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i></span>
+
+        <p>$25,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Hummer', 25000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+      
+    <!-- bmw Cars -->
+     <!--Car 1-->
+    <div class="car-card" data-type="bmw" >
+      <img src="bmw-3.png" style="padding-bottom:28px ;">
+      <h3>BMW</h3>
+      <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i></span>
+
+      <p>$20,000</p>
+      <button class="add" id="purchase-btn" onclick="addToCart('BMW', 20000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+         <!--Car 2-->
+
+    <div class="car-card" data-type="bmw">
+        <img src="BMW.png" style="width: 150px; padding-top:-40px ;">
+        <h3>BMW</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$40,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('BMW', 40000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+           <!--Car 3-->
+
+      <div class="car-card" data-type="bmw">
+        <img src="bmw1.png"  style="padding-bottom:48px ;">
+        <h3>BMW</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$50,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('BMW', 50900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+           <!--Car 4-->
+
+      <div class="car-card" data-type="bmw">
+        <img src="bmw2.png" style="padding-bottom:18px ;">
+        <h3>BMW</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$45,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('BMW', 45000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+
+
+
+    <!-- hyundai Cars -->
+<!--car 1-->
+      <div class="car-card" data-type="hyundai">
+        <img src="hyundai-6 copy.png" style="padding-bottom:28px ;">
+        <h3>Hyundai</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i></span>
+
+        <p>$20,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Hyundai', 20000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+<!--car 2-->
+
+      <div class="car-card" data-type="hyundai">
+        <img src="hyundai-3.png" style="padding-bottom:28px ;">
+        <h3>Hyundai</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i></span>
+
+        <p>$25,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Hyundai', 25000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+
+      <!--car 3-->
+
+      <div class="car-card" data-type="hyundai">
+        <img src="hyundai-10.png" >
+        <h3>Hyundai</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i></span>
+
+        <p>$22,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Hyundai', 22900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+      <!--car 4-->
+
+      <div class="car-card" data-type="hyundai">
+        <img src="hyundai-12.png" >
+        <h3>Hyundai</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$40,000</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Hyundai', 40000)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+
+
+      
+  </div>
+
+
+
+
+
+
+
+
+<!--Electric Cars section-->
+
+
+
+
+  <h1 class="heading" id="Electric" style="margin-top: 100px;"><span>Electric Cars</span></h1><!--the address-->
+<!--List of existing car types-->
+
+  <div class="filter-menu" >
+    <button class="filter-button active" data-type="all">All</button>
+    <button class="filter-button" data-type="tesla"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Tesla_logo.png/1200px-Tesla_logo.png"></button>
+    <button class="filter-button" data-type="NIO"><img src="https://static.stocktitan.net/company-logo/nio-lg.png"></button>
+    <button class="filter-button" data-type="mercedes"><img src="mercedes-benz-car-logo.png"></button>
+    <button class="filter-button" data-type="bmw"><img src="bmw-car-logo.png"></button>
+
+  </div>
+
+  <div class="car-grid">
+    <!-- Tesla Cars -->
+     <!-- Car 1-->
+    <div class="car-card" data-type="tesla">
+      <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_ce44d57a7cbbea78c4fa20ac9d9c3b51.webp" style="width: 150px;" style="padding-bottom: 22px;">
+      <h3>Tesla Model X</h3>
+      <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+      <p>$598,900</p>
+      <button class="add" id="purchase-btn" onclick="addToCart('Tesla Model X', 598900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+
+         <!-- Car 2-->
+
+    <div class="car-card" data-type="tesla">
+      <img src="https://img.freepik.com/premium-photo/red-attractive-tesla-model-3-white-png-transparent-background_94628-51101.jpg" alt="Tesla Model 3" style="padding-bottom: 32px;">
+      <h3>Tesla Model 3</h3>
+      <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+      <p>$245,900</p>
+      <button class="add" id="purchase-btn" onclick="addToCart('Tesla Model 3', 245900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+         <!-- Car 3-->
+
+    <div class="car-card" data-type="tesla">
+        <img src="https://tesla.com/ownersmanual/images/GUID-B5641257-9E85-404B-9667-4DA5FDF6D2E7-online-en-US.png" alt="Tesla Model 3" style="padding-bottom: 52px;">
+        <h3>Tesla Model 3</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$145,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Tesla Model 3', 145900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+         <!-- Car 3-->
+
+    <div class="car-card" data-type="tesla">
+        <img src="https://www.mountox.com/assets/images/products/111/tesla-cybertruck-front.png" alt="Tesla Model 3" style="padding-bottom: 12px;">
+        <h3>2025 Tesla-cybertruck</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$1,945,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Tesla-cybertruck', 1945900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+    
+
+    <!-- NIO Cars -->
+   <!--Car 1-->
+    <div class="car-card" data-type="NIO">
+        <img src="https://cdn.saabre.com/uploads/public/617/d77/abc/617d77abc8f0c433730841.png" style="padding-bottom: 22px;">
+        <h3>NIO</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$175,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('NIO', 175900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+
+         <!--Car 2-->
+
+      <div class="car-card" data-type="NIO">
+        <img src="https://image.made-in-china.com/2f0j00LJfitpUrFIgG/Nio-Et7-Made-in-China-75kwh-Middle-and-Large-Sedan-EV-Cars.webp" style="padding-bottom: 12px;" >
+        <h3>NIO</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$75,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('NIO', 75900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+         <!--Car 3-->
+
+      <div class="car-card" data-type="NIO">
+        <img src="https://cdn.saabre.com/uploads/public/654/363/172/654363172296c746161026.png" style="padding-bottom: 42px;">
+        <h3>NIO</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$175,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('NIO', 175900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+      
+    <!-- bmw Cars -->
+    <!--car 1-->
+    <div class="car-card" data-type="bmw">
+        <img src="https://evmotions.ie/evcarspics/bmw-i3.png">
+        <h3>BMW</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$150,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('BMW', 150900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+
+          <!--car 2-->
+
+      <div class="car-card" data-type="bmw">
+        <img src="https://www.motortrend.com/uploads/sites/10/2023/05/2024-bmw-ix-electric-xdrive50-base-suv-angular-front.png?w=768&width=768&q=75&format=webp" style="padding-bottom: 12px;">
+        <h3>BMW</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$250,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('BMW', 250900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+      </div>
+
+          <!--car 3-->
+
+      <div class="car-card" data-type="bmw">
+        <img src="https://media.adtorqueedge.com/bmw-au/images/content/power-your-electric/car1.png" style="padding-bottom: 22px;">
+        <h3>BMW</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$100,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('BMW', 100900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+
+
+    <!-- mercedes Cars -->
+
+<!--car 1-->
+      <div class="car-card" data-type="mercedes">
+        <img src="https://www.motortrend.com/uploads/izmo/mercedes_benz/eqb_class/2023/eqb_class.png" style="padding-bottom: 32px;">
+        <h3>Mercedes</h3>
+       <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$90,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Mercedes', 90900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+      <!--car 2-->
+
+
+      <div class="car-card" data-type="mercedes">
+        <img src="mercedes-s.png" style="padding-bottom: 32px;">
+        <h3>Mercedes</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$350,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Mercedes', 350900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+      <!--car 3-->
+
+      <div class="car-card" data-type="mercedes">
+        <img src="https://images.netdirector.co.uk/gforces-auto/image/upload/q_auto,c_fill,f_auto,fl_lossy/auto-client/35b63cef9f2e086cfe971ead1406abc0/eqc.png" style="padding-bottom: 32px;">
+        <h3>Mercedes</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+        <p>$150,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Mercedes', 150900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+      </div>
+      
+  </div>
+
+
+
+
+
+
+
+
+<!--Part of car section-->
+
+
+  <h1 class="heading" id="part" style="margin-top: 100px;"><span>Part of car</span></h1>
+<!--List of existing car types-->
+  <div class="filter-menu" >
+    <button class="filter-button active" data-type="all">All</button>
+    <button class="filter-button" data-type="Engines">Engines</button>
+    <button class="filter-button" data-type="Battery">Battery</button>
+    <button class="filter-button" data-type="Oil Filter">Oil Filter</button>
+    <button class="filter-button" data-type="Alternator">Alternator</button>
+    <button class="filter-button" data-type="Tires">Tires</button>
+  </div>
+
+  <div class="car-grid">
+    <!-- Engines -->
+    <div class="car-card" data-type="Engines">
+      <img src="https://assets.whichcar.com.au/image/upload/s--L1HsN_R0--/c_fill,f_auto,q_auto:good/c_scale,w_768/v1/archive/whichcar/2019/08/02/Misc/ferrari-v8.jpg-w.jpg" alt="bugatti Model X" style="padding-bottom: 32px;">
+      <h3>Engines</h3>
+      <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+      <p>$5,900</p>
+      <button class="add" id="purchase-btn" onclick="addToCart('Engines', 5900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+    <div class="car-card" data-type="Engines">
+      <img src="https://avtotachki.com/wp-content/uploads/2023/02/dvigatel-mercedes-benz-om642-1.jpg" alt="Tesla Model 3" style="padding-bottom: 42px;">
+      <h3>Engines</h3>
+      <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+      <p>$3,900</p>
+      <button class="add" id="purchase-btn" onclick="addToCart('Engines', 3900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+    <div class="car-card" data-type="Engines">
+        <img src="https://s.alicdn.com/@sc04/kf/H04db2d9d4a394eca937f612cc069193di.jpg_300x300.jpg" style="width: 150px;" style="padding-bottom: 42px;">
+        <h3>Engines</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$3,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Engines', 3900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+    <div class="car-card" data-type="Engines">
+        <img src="https://images.netdirector.co.uk/gforces-auto/image/upload/w_469,h_352,q_auto,c_fill,f_auto,fl_lossy/auto-client/e30384c6b9f59b5f1a779783fac2b813/2024_camaro_performance_4.png" style="padding-bottom: 22px;">
+        <h3>Engines</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$6,900</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Engines', 6900)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+    </div>
+    
+
+    <!-- Battery Cars -->
+   
+    <div class="car-card" data-type="Battery">
+        <img src="https://cdn.al-ain.com/images/2021/2/16/102-121139-best-car-battery_700x400.jpg" style="padding-bottom: 52px;">
+        <h3>Battery</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$175</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Battery', 175)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+      <div class="car-card" data-type="Battery">
+        <img src="https://www.globalbatteries.co.za/cdn/shop/products/exide-automotive-exide-674c-16151364632657_800x.jpg?v=1709118955" style="width: 150px;">
+        <h3>Battery</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$105</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Battery', 175)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+      
+    <!-- Oil Filter -->
+    
+    <div class="car-card" data-type="Oil Filter">
+        <img src="https://www.pgfilters.com/wp-content/uploads/2023/02/What-is-the-Oil-Filters-Primary-Job_-1000x675-1.jpg" style="padding-bottom: 32px;">
+        <h3>Oil Filter</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$20</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Oil Filter', 20)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+     
+    <!--Alternator -->
+
+
+      <div class="car-card" data-type="Alternator">
+        <img src="https://images-cdn.ubuy.co.in/63f39b6bb3dbf8629420a885-total-power-parts-400-52340-alternator.jpg" >
+        <h3>Alternator</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$550</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Alternator', 550)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+
+    <!--Tires-->
+      <div class="car-card" data-type="Tires">
+        <img src="https://www.goodyear.com/dw/image/v2/BJQJ_PRD/on/demandware.static/-/Sites-goodyear-master-catalog/default/dw6d471938/images/large/Assurance_WeatherReady_2_24987.png?sw=400&sh=400&sm=fit&sfrm=png">
+        <h3>Tires</h3>
+        <span class="star"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span>
+
+        <p>$250</p>
+        <button class="add" id="purchase-btn" onclick="addToCart('Tires', 250)"><i class='bx bx-cart-add'></i> Add to Cart</button>
+
+      </div>
+     
+  </div>
+
+
+
+
+  
+  
+
+<!--Shopping Cart-->
+
+
+  <div class="cart-section" id="cart">
+    <h2><i class='bx bxs-id-card'></i> Shopping Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total-price">0.00</span></p>  <!--total-price-->
+    <button onclick="clearCart()"><i class='bx bxs-trash'></i> Clear Cart</button> <!--Clear-->
+    <button id="confirm-purchase">Confirm Purchase</button> <!--Confirmation message-->
+    <button class="close-popup" onclick="toggleCart()" style="margin-top: -190px; margin-left: 270px; width: 50px;  background: none;"><i class='bx bx-x' style="font-size: 50px; font-weight: 800;"></i></button>
+
+</div>
+
+
+
+
+
+<!--preloader-->
+
+
+<div id="preloader">
+  <div class="loader-icon">
+    <img src="car-wheel-9.png">
+  </div>
+</div>
+
+
+<script>
+  var load = document.getElementById("preloader");
+  
+
+  window.addEventListener("load",function(){
+      load.style.display="none";
+  })
+
+</script>
+
+
+
+
+
+
+
+
+<script>
+
+
+
+
+
+//List of existing car types//
+
+    // Select filter buttons and car cards
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const carCards = document.querySelectorAll('.car-card');
+
+    // Add click event to each filter button
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to the clicked button
+        button.classList.add('active');
+
+        // Get the data-type of the clicked button
+        const type = button.getAttribute('data-type');
+
+        // Show/hide car cards based on type
+        carCards.forEach(card => {
+          if (type === 'all' || card.getAttribute('data-type') === type) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Show all cars by default
+    document.querySelector('.filter-button[data-type="all"]').click();
+
+
+
+
+
+
+
+
+
+//Shopping Cart//
+
+
+
+    // Attempt to retrieve the cart from localStorage, if not found, initialize it as an empty array.
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let totalPrice = 0;
+
+// Add an event listener to wait for the DOM to be fully loaded before executing the updateCart function.
+document.addEventListener('DOMContentLoaded', updateCart);
+
+// Function to add a product to the cart
+function addToCart(product, price) {
+    // Push the product object into the cart array
+    cart.push({ product, price });
+    
+    // Save the updated cart in localStorage to persist it between sessions.
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Update the cart display in the UI.
+    updateCart();
+}
+
+// Function to update the cart and display items in the UI
+function updateCart() {
+    // Get the DOM elements for the cart items, total price, and cart count.
+    const cartItems = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
+    const cartCountElement = document.getElementById('cart-count');
+
+    // Clear any existing content in the cart display.
+    cartItems.innerHTML = '';
+    totalPrice = 0;
+
+    // Loop through all items in the cart and add them to the UI.
+    cart.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.className = 'cart-item';
+        li.innerHTML = `${item.product} - $${item.price.toFixed(2)} <button onclick="removeFromCart(${index})">Remove</button>`;
+        cartItems.appendChild(li);
+        
+        // Add the item price to the total price.
+        totalPrice += item.price;
+    });
+
+    // Update the total price displayed in the UI.
+    totalPriceElement.textContent = totalPrice.toFixed(2);
+
+    // Update the cart count (number of items) in the UI.
+    cartCountElement.textContent = cart.length;
+}
+
+// Function to remove an item from the cart
+function removeFromCart(index) {
+    // Remove the item from the cart array using splice
+    cart.splice(index, 1);
+    
+    // Update the cart in localStorage after removal.
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Update the cart display in the UI.
+    updateCart();
+}
+
+// Function to clear the entire cart
+function clearCart() {
+    // Reset the cart to an empty array.
+    cart = [];
+    
+    // Update localStorage after clearing the cart.
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Update the cart display in the UI.
+    updateCart();
+}
+
+// Function to toggle the visibility of the cart
+function toggleCart() {
+    const cartSection = document.getElementById('cart');
+    // Use classList.toggle to add or remove the 'show' class from the cart section.
+    cartSection.classList.toggle('show');
+}
+
+// Function to close the login popup
+function closePopup() {
+    // Hide the login popup by setting its style.display property to 'none'
+    document.getElementById('loginPopup').style.display = 'none';
+}
+
+// Function to display a thank-you message upon purchase
+function confirmPurchase() {
+    alert("Welcome to our showroom. We hope you have enjoyed this experience");
+}
+
+// Add an event listener to the 'confirm-purchase' button to show a thank-you message when clicked.
+document.getElementById('confirm-purchase').addEventListener('click', confirmPurchase);
+</script>
+
+
+
+
+
+
+    <script src="script.js"></script><!--Link to the javascript page-->
+
+</body>
+</html>

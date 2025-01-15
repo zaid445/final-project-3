@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Car</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--Link to your boxicons-->
+    <link rel="stylesheet" href="style.css"> <!--Link to the css page-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/><!--Link to swiper similar to bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"><!--Link to bootstrap-->
+</head>
+<body>
+  
+  <!--Navbar-->
+    <header>
+        <div class="logo">Max <span style="color: #333;">wheels</span></div><!--Logo of web-->
+        <nav>
+            <a href="#">Home</a>
+            <a href="#vehicles">Vehicles</a>
+            <a href="#future">The Future</a>
+            <a href="#special">Special</a>
+            <a href="#part">Parts</a>
+            <a href="#review">Review</a>
+            <a href="index2.html">Store</a>
+
+        </nav>
+        <button class="login-button"  id="loginButton" onclick="openPopup()">Login</button><!--Log in to the site-->
+      </header>
+
+      
+<!--Home-->
+    <div class="hero">
+        <h1>FIND YOUR CAR</h1>
+        <div class="car-container">
+            <img src="mercedes-41.png" alt="White Car">
+            <img src="ferrari.png" alt="Blue Car">
+            <img src="mercedes-benz-gle-coupe-white-car-2.png" alt="Orange Car">
+        </div>
+        <a href="#vehicles" class="explore-button" style="position: relative; top: 100px;">Explore Cars</a>
+    </div>
+    
+<!--The process of entering the email and password-->
+    <div class="popup" id="loginPopup">
+        <div class="popup-content">
+            <button class="close-popup" onclick="closePopup()" style="margin-top: 50px; width: 100px;  background: none;"><i class='bx bx-x' style="font-size: 50px; font-weight: 800;"></i></button>
+            <h2>USER LOGIN</h2>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="validateLogin()">Login</button>
+        </div>
+    </div>
+
+
+<!--Statistics and characteristics of the exhibition-->
+    <div class="stats-container">
+        <div class="stat-card">
+            <i class='bx bxs-home'></i>          <h2>150+</h2>
+          <p>Branches</p>
+        </div>
+        <div class="stat-card">
+            <i class='bx bxs-car' ></i>          <h2>4770+</h2>
+          <p>Cars Sold</p>
+        </div>
+        <div class="stat-card">
+            <i class='bx bx-user'></i>          <h2>320+</h2>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat-card">
+            <i class='bx bx-car'></i>          <h2>1500+</h2>
+          <p>New Cars</p>
+        </div>
+      </div>
+
+
+
+
+ <!--vehicles-->     
+<!--Show cars to users-->
+<section class="vehicles" id="vehicles">
+    <div class="swiper vehicles-slider">
+        <h1 class="heading">Popular <span>vehicles</span></h1>
+        <div class="swiper-wrapper">
+
+
+
+
+          <!--Car1-->
+            <div class="swiper-slide box">
+                <img src="mercedes-41.png">
+                <div class="content">
+                    <h3>G-Class</h3>
+                    <div class="price" style="box-shadow: 0px 2px 0px rgba(124, 123, 123, 0.8) ;"><span> price: </span>$65000</div>
+                    <!--Vehicle characteristics-->
+                    <p>
+                        NEW
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>2024
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>automatic
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>petrol
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>100km/h
+                    </p>
+                    <a href="index2.html" class="explore-button">    <i class='bx bx-store' style="font-size: 20px;"></i><!--The click that takes you to the store-->
+                      check out</a>
+                </div>
+            </div>
+
+
+
+          <!--Car2-->
+            <div class="swiper-slide box">
+                <img src="bugatti-4.png">
+                <div class="content">
+                    <h3>Bugatti Veyron</h3>
+                    <div class="price" style="box-shadow: 0px 2px 0px rgba(124, 123, 123, 0.8) ;"><span> price: </span>$2000000</div>
+                  
+                    <!--Vehicle characteristics-->
+                    <p>
+                        NEW
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>2021
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>automatic
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>petrol
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>400km/h
+                    </p>
+                    <a href="index2.html" class="explore-button">    <i class='bx bx-store' style="font-size: 20px;"></i><!--The click that takes you to the store-->
+                       check out</a>
+                </div>
+            </div>
+
+
+
+          <!--Car3-->
+            <div class="swiper-slide box">
+                <img src="bugatti-11.png">
+                <div class="content">
+                    <h3>Bugatti Veyron</h3>
+                    <div class="price" style="box-shadow: 0px 2px 0px rgba(124, 123, 123, 0.8) ;"><span> price: </span>$2100000</div>
+                    <!--Vehicle characteristics-->
+                    <p>
+                        NEW
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>2023
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>automatic
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>petrol
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>407km/h
+                    </p>
+                    <a href="index2.html" class="explore-button">    <i class='bx bx-store' style="font-size: 20px;"></i><!--The click that takes you to the store-->
+                       check out</a>
+                </div>
+            </div>
+
+
+
+
+          <!--Car4-->
+            <div class="swiper-slide box">
+                <img src="ferrari1.png">
+                <div class="content">
+                    <h3>Ferrari</h3>
+                    <div class="price" style="box-shadow: 0px 2px 0px rgba(124, 123, 123, 0.8) ;"><span> price: </span>$1500000</div>
+                    <!--Vehicle characteristics-->
+                    <p>
+                        NEW
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>2015
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>automatic
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>petrol
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>350km/h
+                    </p>
+                    <a href="index2.html" class="explore-button">    <i class='bx bx-store' style="font-size: 20px;"></i><!--The click that takes you to the store-->
+                       check out</a>
+                </div>
+            </div>
+
+
+
+          <!--Car5-->
+            <div class="swiper-slide box">
+                <img src="chevrolet-camaro-12.png">
+                <div class="content">
+                    <h3>Chevrolet Camaro</h3>
+                    <div class="price" style="box-shadow: 0px 2px 0px rgba(124, 123, 123, 0.8) ;"><span> price: </span>$35000</div>
+                    <!--Vehicle characteristics-->
+                    <p>
+                        NEW
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>2020
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>automatic
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>petrol
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>250km/h
+                    </p>
+                    <a href="index2.html" class="explore-button">    <i class='bx bx-store' style="font-size: 20px;"></i><!--The click that takes you to the store-->
+                       check out</a>
+                </div>
+            </div>
+
+
+
+          <!--Car6-->
+            <div class="swiper-slide box">
+                <img src="bmw-3.png">
+                <div class="content">
+                    <h3>BMW(Sedan)</h3>
+                    <div class="price" style="box-shadow: 0px 2px 0px rgba(124, 123, 123, 0.8) ;"><span> price: </span>$20000</div>
+                    <!--Vehicle characteristics-->
+                    <p>
+                        NEW
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>2021
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>automatic
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>petrol
+                        <i class='bx bxs-circle' style="color:#ffcc00 ; font-size: 15px;"></i>250Km/h
+                    </p>
+                    <a href="index2.html" class="explore-button">     <i class='bx bx-store' style="font-size: 20px; "></i><!--The click that takes you to the store-->
+                       check out</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!--Electric Vehicles Department-->
+<div class="main-container" id="future">
+
+<!--Introduction to electric cars-->
+    <div class="car-display">
+        <h1 class="heading" style="margin-top: 150px;">The <span>Future</span></h1>
+      <h1 id="car-title">The future of cars</h1>
+      <p id="car-description">
+        Electric cars are vehicles that rely on electricity as their primary source of energy instead of traditional fuel, making them a sustainable and environmentally friendly option. These cars operate using rechargeable batteries that drive silent, efficient electric motors.      </p>
+        <img id="car-image" src="DALL·E 2025-01-12 12.47.56 - An educational illustration explaining electric cars. The image includes a diagram of an electric car with labeled parts such as the battery, electric.webp" alt="Car Image" style="width: 100%; height: auto;">
+
+    </div>
+
+<!--Car reviews section-->
+    <div class="car-selection">
+
+      <!--First car review-->
+      <button onclick="showCar('20230625413766000517378746-900x600-w0.png', '2024 NIO-ES8', 'The NIO ES8 is a premium all-electric SUV produced by the Chinese manufacturer NIO. Designed to offer a blend of performance, luxury, and advanced technology, the ES8 stands out in the electric vehicle market.')"><!---This button changes the content displayed on the page when the button is clicked.-->
+        <img src="20230625413766000517378746-900x600-w0.png" style="width: 200px;">
+        
+        <p style="font-weight: 800;">NIO-ES8</p>
+        <a href="index2.html" class="explore-button" style="font-size: 13px; padding: 9px;"><i class='bx bx-shopping-bag' style="font-size: 15px;"></i>Buy now</a><!--A click takes you to the store-->
+
+      </button>
+
+      <!--Second car review-->
+      <button onclick="showCar('Transpo_TeslaStoryOne_Cybertruck-5.png', '2025 Tesla-cybertruck', 'The Tesla Cybertruck is a unique electric truck announced by Tesla in November 2019. It is distinguished by its futuristic design and powerful performance, making it one of the most distinguished and innovative electric trucks in the world.')"><!---This button changes the content displayed on the page when the button is clicked-->
+        <img src="https://www.mountox.com/assets/images/products/111/tesla-cybertruck-front.png" style="width: 200px;">
+        <p style="font-weight: 800;">2025 Tesla-cybertruck</p>
+        <a href="index2.html" class="explore-button" style="font-size: 13px; padding: 9px;"><i class='bx bx-shopping-bag' style="font-size: 15px;"></i>Buy now</a><!--A click takes you to the store-->
+
+      </button>
+
+
+      <!--Third car review-->
+      <button onclick="showCar('mercedes-s.png', '2025 Mercedes-Benz EQS', 'The Mercedes-Benz EQS is a luxury electric sedan that represents Mercedes flagship model in their EQ electric vehicle lineup. It was introduced in 2021 and is part of the brand’s push towards an electric future.')"><!---This button changes the content displayed on the page when the button is clicked.-->
+        <img src="mercedes-s.png" style="width: 200px; ">
+        <p style="font-weight: 800;">2025 Mercedes-Benz EQS</p>
+        <a href="index2.html" class="explore-button" style="font-size: 13px; padding: 9px;"><i class='bx bx-shopping-bag' style="font-size: 15px;"></i>Buy now</a><!--A click takes you to the store-->
+
+      </button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+<!--A section that talks about a special car-->
+
+  <div class="all" style="background-color: white;">
+
+  <h1 class="heading" style="margin-top: 150px; background-color: white; padding-top: 90px; margin-top: 50px;">A <span>Special</span> Car</h1><!--the address-->
+  <div class="container" id="special">
+
+<!--Pictures of the car from all directions, so that when I click on each picture, the main picture changes-->
+    <div class="thumbnails">
+      <img src="TED74624.jpg" alt="Side View" class="thumbnail"  onclick="changeImage('TED74624.jpg')">
+      <img src="w644.jpg" alt="Back View" class="thumbnail" onclick="changeImage('w644.jpg')">
+      <img src="sixteen-1999.jpg" alt="Top View" class="thumbnail" onclick="changeImage('sixteen-1999.jpg')">
+      <img src="2020-Devel-Sixteen-V8-Prototype-14.jpg" alt="Top View" class="thumbnail" onclick="changeImage('2020-Devel-Sixteen-V8-Prototype-14.jpg')">
+    </div>
+
+<!--Main image-->
+    <div class="main-image">
+      <img id="main-shoe" src="mobil.jpg" alt="Main Shoe View">
+    </div>
+
+    <!--Information about the car-->
+    <div class="description">
+        <img class="logo2"  src="https://car-logos.net/wp-content/uploads/2023/03/devel-sixteen-logo2-scaled.webp"><!--Car logo-->
+        <p>
+          Devel-Sixteen is one of the most exciting and impressive super sports cars in the world, and is considered a masterpiece in the world of cars due to its superior specifications and unique design.</p>
+        <li style="list-style: none;"> <i class='bx bxs-hand-right' style="color: #ffcc00; font-size: 15px;"></i>Limited production.</li>
+        <li style="list-style: none;"> <i class='bx bxs-filter-alt' style="color: #ffcc00; font-size: 15px;"></i>V16 with a capacity of 12.3 liters.</li>
+        <li style="list-style: none;"><i class='bx bxs-hot' style="color: #ffcc00; font-size: 15px;"></i>Power up to 5007 hp.</li>
+        <li style="list-style: none;"><i class='bx bxs-bolt' style="color: #ffcc00; font-size: 15px;"></i>Maximum speed: more than 500 km/h.</li>
+    </div>
+  </div>
+  <!--Car auction-->
+  <div class="car-auction">
+    <div class="auction-details">
+      <img src="DALL·E 2025-01-10 10.28.39 - A simple, modern, and colorful icon of a gavel, representing an auction, designed in a flat style.webp" style="width: 100px;">
+      <h2>Devel-Sixteen</h2> <!--Car name-->
+      
+      <p class="discrb">We are now announcing the start of the auction for the car Devel-Sixteen, model 2024. We invite everyone to participate and submit their offers. Good luck everyone!</p> <!--Vehicle description-->
+        <p class="money"><i class='bx bxs-dollar-circle'  style="font-size: 20px; position: relative; top: 3px; color: #ffcc00;"></i> Current Price: <span id="current-price">$1500000</span> <i class='bx bxs-dollar-circle'  style="font-size: 20px; position: relative; top: 3px; color: #ffcc00;"></i></p><!--Car price-->
+        <p>Time Left: <span id="timer">00:10:00</span>  <i class='bx bxs-timer' style="font-size: 20px; position: relative; top: 3px;"></i></p> <!--End time-->
+    </div>
+    <button id="bid-button">Join Auction +</button>  <!--Enter the auction-->
+</div>
+<div id="result-message" style="display:none; margin-top:20px; margin-left: 620px;"></div> <!--A message showing the auction result-->
+  </div> 
+  
+
+
+
+
+
+
+<!--Auto parts department-->
+
+<div class="part" id="part">
+<img src="car-wheel-9.png" class="wheel"><!--Decoration-->
+<img src="car-wheel-9.png" class="wheel2"><!--Decoration-->
+<h1 class="heading" style="margin-top: 150px; background-color: white; padding-top: 150px; padding-bottom: 100px; margin-top: 50px;">Car <span>Parts</span> Section</h1><!--the address-->
+  
+  <div class="car-parts-section">
+    <!--The first piece-->
+      <div class="part-card">
+          <img src="https://www.pgfilters.com/wp-content/uploads/2023/02/What-is-the-Oil-Filters-Primary-Job_-1000x675-1.jpg" alt="Car Part">
+          <h3>Oil Filter</h3>
+          <p>High-quality original oil filter to keep your engine in excellent condition.</p>
+          <a href="index2.html" class="button" ><i class='bx bxs-cart' style="color: white;"></i> Order Now</a><!--A click takes you to the store-->
+      </div>
+
+    <!--The Second piece-->
+      <div class="part-card">
+          <img src="https://www.globalbatteries.co.za/cdn/shop/products/exide-automotive-exide-674c-16151364632657_800x.jpg?v=1709118955" style="width: 200px;" alt="Car Part">
+          <h3>Battery</h3>
+          <p>Long-lasting battery with superior performance to meet your car's electrical needs.</p>
+          <a href="index2.html" class="button"><i class='bx bxs-cart' style="color: white;"></i> Order Now</a><!--A click takes you to the store-->
+      </div>
+
+    <!--The third piece-->    
+      <div class="part-card">
+        <img src="https://assets.whichcar.com.au/image/upload/s--L1HsN_R0--/c_fill,f_auto,q_auto:good/c_scale,w_768/v1/archive/whichcar/2019/08/02/Misc/ferrari-v8.jpg-w.jpg" style="width: 400px;" alt="Car Part">
+        <h3>BMW S55 engine</h3>
+        <p>Known for its robust design and flexibility, the design is featured in the M3 and M4 cars.</p>
+        <a href="index2.html" class="button"><i class='bx bxs-cart' style="color: white;"></i> Order Now</a><!--A click takes you to the store-->
+      </div>
+
+    <!--Fourth piece-->
+    <div class="part-card">
+      <img src="https://images-cdn.ubuy.co.in/63f39b6bb3dbf8629420a885-total-power-parts-400-52340-alternator.jpg" style="width: 210px;" alt="Car Part">
+      <h3>Alternator</h3>
+      <p>It generates electricity to operate the car's electrical components and charge the battery.</p>
+      <a href="index2.html" class="button"><i class='bx bxs-cart' style="color: white;"></i> Order Now</a><!--A click takes you to the store-->
+    </div>
+
+    <!--Fifth piece-->
+  <div class="part-card">
+    <img src="https://www.goodyear.com/dw/image/v2/BJQJ_PRD/on/demandware.static/-/Sites-goodyear-master-catalog/default/dw6d471938/images/large/Assurance_WeatherReady_2_24987.png?sw=400&sh=400&sm=fit&sfrm=png" style="width: 180px;" alt="Car Part">
+    <h3>Tires</h3>
+    <p>The only part of the car that is in direct contact with the road. Provides stability and traction. It has all types of summer, winter and all-round tires.</p>
+    <a href="index2.html" class="button"><i class='bx bxs-cart' style="color: white;"></i> Order Now</a><!--A click takes you to the store-->
+  </div>
+
+<!--Sixth piece-->
+<div class="part-card">
+  <img src="https://www.assayyarat.com/wp-content/uploads/2019/12/ZF-Dual-Clutch-Transmission.jpg" style="width: 240px;" alt="Car Part">
+  <h3>Transmission</h3>
+  <p>It transfers power from the engine to the wheels. It helps to change the speed of the car. It has manual, automatic, CVT, and dual clutch (DCT) types.</p>
+  <a href="index2.html" class="button"><i class='bx bxs-cart' style="color: white;"></i> Order Now</a><!--A click takes you to the store-->
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+<!--People's reaction to our exhibition-->
+
+<div class="customer" id="review">
+
+<h1 class="heading" style="margin-top: 150px; background-color: white; padding-top: 150px; padding-bottom: 100px; margin-top: 100px;">Why <span>choose</span> us?</h1><!--the address-->
+
+<!--People's experience-->
+<div class="customer-reviews-section">
+  <!--1-->
+    <div class="review" >
+        <img src="https://i.pinimg.com/736x/bf/fa/bc/bffabc9b4b4690efee98175a0c589a99.jpg" alt="Customer Image">
+        <h3>John Doe</h3>
+        <p>Amazing service! The parts arrived quickly and were exactly what I needed. Highly recommend!</p>
+    </div>
+  <!--2-->
+    <div class="review">
+        <img src="https://png.pngtree.com/png-clipart/20230211/original/pngtree-woman-working-with-laptop-png-image_8952120.png" alt="Customer Image">
+        <h3>Jane Smith</h3>
+        <p>The quality of the parts is outstanding. I had a great experience with their customer service team.</p>
+    </div>
+  <!--3-->
+    <div class="review">
+        <img src="https://i.pinimg.com/736x/de/d4/f5/ded4f5e6a3f8b37003745ea7e6dac500.jpg" alt="Customer Image">
+        <h3>Michael Johnson</h3>
+        <p>Fast shipping and excellent prices. I will definitely order from them again!</p>
+    </div>
+</div>
+
+</div>
+
+
+
+
+<!--footer-->
+<footer class="footer">
+  <div class="section subscribe">
+      <h3>Choose the best because you are the best</h3>
+      <p>Get exclusive best updates straight to your inbox.</p>
+      <!--Enter the user's email-->
+      <form>
+          <input type="email" placeholder="Email">
+          <button type="submit">Ok</button>
+      </form>
+  </div>
+
+  <!--Link on the web-->
+  <div class="section">
+      <h3>Important Links</h3>
+      <ul>
+          <li><a href="#">Home</a></li>
+            <li><a href="#vehicles">Vehicles</a></li>
+            <li><a href="#future">The Future</a></li>
+           <li><a href="#special">Special</a></li>
+            <li><a href="#part">Parts</a></li>
+            <li><a href="#review">Review</a></li> 
+      </ul>
+  </div>
+  <!--Contact Us-->
+  <div class="section">
+    <h3>Contact Us</h3>
+    <p><i class='bx bxs-map'></i>Jab Jenin Lebanon</p><!--location-->
+    <p><i class='bx bx-message-minus'></i> zaidalobaidy02@gmail.com</p><!--email-->
+    <p><i class='bx bx-phone'></i> +961 03985643</p><!--Fon number-->
+  </div>
+</footer>
+
+
+
+
+<!--preloader-->
+
+<div id="preloader">
+  <div class="loader-icon">
+    <img src="car-wheel-9.png">
+  </div>
+</div>
+
+
+<script>
+  var load = document.getElementById("preloader");
+  
+
+  window.addEventListener("load",function(){
+      load.style.display="none";
+  })
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!--Link to swiper similar to bootstrap-->
+
+<script>
+  /*home login*/
+function openPopup() {     /*To make the login popup visible.*/
+
+document.getElementById('loginPopup').style.display = 'flex';     /* It selects an element with the ID loginPopup and sets its style.display property to 'flex', making it visible on the screen.*/
+}
+
+function closePopup() {     /*To hide the login popup.*/
+
+document.getElementById('loginPopup').style.display = 'none'; /* its style.display property to 'none', hiding it from view.*/
+}
+
+
+function validateLogin() {   /* To check if the user has entered both email and password.*/
+const loginButton = document.getElementById("loginButton");
+const email = document.getElementById('email').value;  /*It retrieves the values of the input fields with IDs email and password.*/
+const password = document.getElementById('password').value; /*It retrieves the values of the input fields with IDs email and password.*/
+
+if (!email || !password) {
+    alert('Please verify');  /*If either field is empty, an alert prompts the user to verify their input.*/
+    loginButton.textContent = "Login";
+
+} else {
+    alert('You are logged in'); /*If both fields have values, an alert informs the user they are logged in.*/
+    loginButton.innerHTML = '<img src="user-circle-solid-24.png" alt="Profile" class="profile-img" style="width:30px;">';
+
+}
+}
+
+</script>
+<script>
+/*vehicles-slider*/
+
+var swiper = new Swiper(".vehicles-slider", {  /*A new Swiper object is created, which is a library used to create sliders.*/
+slidesPerView: 1, /*Specifies the number of slides that are displayed at one time.*/
+spaceBetween: 20, /*The distance between slices is specified in units (usually pixels).*/
+loop:true,  /*Specifies whether the slider operates in continuous repeat mode*/
+grabCursor:true,  /*The cursor turns into a "hand" shape.*/
+centeredSlides:true, /*The active slide will be in the center.*/
+autoplay: { /*An object containing the slider's autoplay settings*/
+    delay: 9500,
+    disableOnInteraction: false,
+  },
+pagination: {  /*An object containing numbering settings*/
+  el: ".swiper-pagination",
+  clickable: true,
+},
+breakpoints: {  /*An object containing settings for the slider's responsiveness to display changes.*/
+  0: {
+    slidesPerView: 1,
+  },
+  768: {
+    slidesPerView: 2,
+  },
+  991: {
+    slidesPerView: 3,
+  },
+},
+});
+
+
+/*the futer*/
+function showCar(imageSrc, title, description) {
+    const carImage = document.getElementById("car-image");
+    document.getElementById("car-title").textContent = title;
+    document.getElementById("car-description").textContent = description;
+    carImage.src = imageSrc; // تغيير مصدر الصورة
+}
+
+
+
+
+
+/*special car*/
+function changeImage(imagePath) {  /*The name of the function that receives a single transaction*/
+const mainImage = document.getElementById('main-shoe');
+mainImage.src = imagePath; /*The src property specifies the source of the image.*/
+}
+
+</script>
+
+
+
+
+<script>
+
+/*Auction*/
+let currentPrice = 1500000;
+let timeLeft = 600; // 10 minutes in seconds
+let autoIncreaseInterval = 30; // Time interval in seconds for auto price update
+let priceIncreaseAmount = 100000; // Amount to increase each time
+let userIsWinner = false; //A variable is set to determine whether the current user is the winner of the auction, and starts with a value of false.
+let userBid = 0;
+
+const priceElement = document.getElementById('current-price');
+const timerElement = document.getElementById('timer');
+const bidButton = document.getElementById('bid-button');
+const resultMessage = document.getElementById('result-message');
+
+// Function to update price
+function updatePrice() {
+currentPrice += priceIncreaseAmount;
+priceElement.textContent = `$${currentPrice}`;
+if (currentPrice > userBid) {
+        userIsWinner = false; // User loses if the automatic price is higher
+    }
+}
+
+// Function to update the timer
+function updateTimer() {
+let minutes = Math.floor(timeLeft / 60);
+let seconds = timeLeft % 60;
+timerElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;//The text inside the timerElement is updated to display the remaining time in Minutes:Seconds format, with a zero added in front of individual numbers.
+timeLeft--;
+
+if (timeLeft < 0) {
+    clearInterval(timerInterval);//The timer that updates the remaining time is stopped every second.
+    clearInterval(priceUpdateInterval);//Automatic price updating is turned off.
+    declareWinner();
+}
+}
+
+// Declare the winner when auction ends
+function declareWinner() {
+if (userIsWinner) {
+    resultMessage.textContent = "Congratulations! You have won the auction!";
+    resultMessage.style.color = "green";
+} else {
+    resultMessage.textContent = "Sorry, you did not win the auction.";
+    resultMessage.style.color = "red";
+}
+resultMessage.style.display = "block";
+}
+
+// Manually increase the price and set the user as the current winner
+bidButton.addEventListener('click', () => {
+userBid = currentPrice + priceIncreaseAmount; // Update the user's bid
+updatePrice();
+userIsWinner = true;
+});
+
+// Update the timer every second
+let timerInterval = setInterval(updateTimer, 1000);
+
+// Automatically increase the price at set intervals
+let priceUpdateInterval = setInterval(updatePrice, autoIncreaseInterval * 1000);
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!--Link to swiper similar to bootstrap-->
+<script src="script.js"></script><!--Link to the javascript page-->
+</body>
+</html>
